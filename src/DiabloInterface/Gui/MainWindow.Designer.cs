@@ -68,13 +68,9 @@
             this.labelIasVal = new System.Windows.Forms.Label();
             this.panelResistances = new System.Windows.Forms.TableLayoutPanel();
             this.labelFireResVal = new System.Windows.Forms.Label();
-            this.labelColdResVal = new System.Windows.Forms.Label();
             this.labelLightResVal = new System.Windows.Forms.Label();
             this.labelPoisonResVal = new System.Windows.Forms.Label();
-            this.labelNormPerc = new System.Windows.Forms.Label();
-            this.labelNmPerc = new System.Windows.Forms.Label();
-            this.labelHellPerc = new System.Windows.Forms.Label();
-            this.panelDiffPercentages2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelColdResVal = new System.Windows.Forms.Label();
             this.panelDiffPercentages = new System.Windows.Forms.TableLayoutPanel();
             this.normLabel = new System.Windows.Forms.Label();
             this.nmLabel = new System.Windows.Forms.Label();
@@ -82,6 +78,10 @@
             this.normLabelVal = new System.Windows.Forms.Label();
             this.nmLabelVal = new System.Windows.Forms.Label();
             this.hellLabelVal = new System.Windows.Forms.Label();
+            this.panelDiffPercentages2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelNormPerc = new System.Windows.Forms.Label();
+            this.labelNmPerc = new System.Windows.Forms.Label();
+            this.labelHellPerc = new System.Windows.Forms.Label();
             this.outerLeftRightPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panelRuneDisplay2 = new System.Windows.Forms.Panel();
             this.contextMenu.SuspendLayout();
@@ -92,8 +92,8 @@
             this.panelBaseStats.SuspendLayout();
             this.panelAdvancedStats.SuspendLayout();
             this.panelResistances.SuspendLayout();
-            this.panelDiffPercentages2.SuspendLayout();
             this.panelDiffPercentages.SuspendLayout();
+            this.panelDiffPercentages2.SuspendLayout();
             this.outerLeftRightPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,18 +108,21 @@
             this.lvlLabel.Size = new System.Drawing.Size(56, 16);
             this.lvlLabel.TabIndex = 2;
             this.lvlLabel.Text = "LVL: -";
+            this.lvlLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.nameLabel.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.nameLabel.ForeColor = System.Drawing.Color.Magenta;
             this.nameLabel.Location = new System.Drawing.Point(3, 0);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(68, 27);
             this.nameLabel.TabIndex = 6;
             this.nameLabel.Text = "Name";
+            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nameLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // strLabel
             // 
@@ -133,6 +136,7 @@
             this.strLabel.TabIndex = 7;
             this.strLabel.Text = "STR:";
             this.strLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.strLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // dexLabel
             // 
@@ -146,6 +150,7 @@
             this.dexLabel.TabIndex = 8;
             this.dexLabel.Text = "DEX:";
             this.dexLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dexLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // vitLabel
             // 
@@ -159,6 +164,7 @@
             this.vitLabel.TabIndex = 10;
             this.vitLabel.Text = "VIT:";
             this.vitLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.vitLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // eneLabel
             // 
@@ -172,6 +178,7 @@
             this.eneLabel.TabIndex = 11;
             this.eneLabel.Text = "ENE:";
             this.eneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.eneLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // fireLabel
             // 
@@ -184,6 +191,7 @@
             this.fireLabel.Size = new System.Drawing.Size(48, 16);
             this.fireLabel.TabIndex = 12;
             this.fireLabel.Text = "FIRE:";
+            this.fireLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // coldLabel
             // 
@@ -196,6 +204,7 @@
             this.coldLabel.Size = new System.Drawing.Size(48, 16);
             this.coldLabel.TabIndex = 13;
             this.coldLabel.Text = "COLD:";
+            this.coldLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // lighLabel
             // 
@@ -208,6 +217,7 @@
             this.lighLabel.Size = new System.Drawing.Size(48, 16);
             this.lighLabel.TabIndex = 14;
             this.lighLabel.Text = "LIGH:";
+            this.lighLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // poisLabel
             // 
@@ -220,6 +230,7 @@
             this.poisLabel.Size = new System.Drawing.Size(48, 16);
             this.poisLabel.TabIndex = 15;
             this.poisLabel.Text = "POIS:";
+            this.poisLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // goldLabel
             // 
@@ -231,6 +242,7 @@
             this.goldLabel.Size = new System.Drawing.Size(64, 16);
             this.goldLabel.TabIndex = 16;
             this.goldLabel.Text = "GOLD: -";
+            this.goldLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // deathsLabel
             // 
@@ -242,6 +254,7 @@
             this.deathsLabel.Size = new System.Drawing.Size(80, 16);
             this.deathsLabel.TabIndex = 17;
             this.deathsLabel.Text = "DEATHS: -";
+            this.deathsLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // contextMenu
             // 
@@ -251,14 +264,15 @@
             this.debugMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenu.Name = "contextMenu";
-            this.contextMenu.Size = new System.Drawing.Size(161, 92);
+            this.contextMenu.Size = new System.Drawing.Size(159, 92);
+            this.contextMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Image = global::DiabloInterface.Properties.Resources.wrench_orange;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsMenuItem_Click);
             // 
@@ -267,7 +281,7 @@
             this.resetToolStripMenuItem.Image = global::DiabloInterface.Properties.Resources.arrow_refresh;
             this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
             this.resetToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.resetToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.resetToolStripMenuItem.Text = "Reset";
             this.resetToolStripMenuItem.Click += new System.EventHandler(this.resetMenuItem_Click);
             // 
@@ -275,7 +289,7 @@
             // 
             this.debugMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("debugMenuItem.Image")));
             this.debugMenuItem.Name = "debugMenuItem";
-            this.debugMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.debugMenuItem.Size = new System.Drawing.Size(158, 22);
             this.debugMenuItem.Text = "Debug";
             this.debugMenuItem.Click += new System.EventHandler(this.debugMenuItem_Click);
             // 
@@ -283,7 +297,7 @@
             // 
             this.exitToolStripMenuItem.Image = global::DiabloInterface.Properties.Resources.cross;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
@@ -298,6 +312,7 @@
             this.frwLabel.Size = new System.Drawing.Size(40, 16);
             this.frwLabel.TabIndex = 7;
             this.frwLabel.Text = "FRW:";
+            this.frwLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // fcrLabel
             // 
@@ -310,6 +325,7 @@
             this.fcrLabel.Size = new System.Drawing.Size(40, 16);
             this.fcrLabel.TabIndex = 8;
             this.fcrLabel.Text = "FCR:";
+            this.fcrLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // fhrLabel
             // 
@@ -322,6 +338,7 @@
             this.fhrLabel.Size = new System.Drawing.Size(40, 16);
             this.fhrLabel.TabIndex = 10;
             this.fhrLabel.Text = "FHR:";
+            this.fhrLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // iasLabel
             // 
@@ -334,6 +351,7 @@
             this.iasLabel.Size = new System.Drawing.Size(40, 16);
             this.iasLabel.TabIndex = 11;
             this.iasLabel.Text = "IAS:";
+            this.iasLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // panelRuneDisplay
             // 
@@ -345,10 +363,12 @@
             this.panelRuneDisplay.Name = "panelRuneDisplay";
             this.panelRuneDisplay.Size = new System.Drawing.Size(367, 28);
             this.panelRuneDisplay.TabIndex = 18;
+            this.panelRuneDisplay.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Black;
             this.flowLayoutPanel1.Controls.Add(this.nameLabel);
             this.flowLayoutPanel1.Controls.Add(this.panelDeathsLvl);
             this.flowLayoutPanel1.Controls.Add(this.panelSimpleStats);
@@ -362,6 +382,7 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(373, 199);
             this.flowLayoutPanel1.TabIndex = 20;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.flowLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // panelDeathsLvl
             // 
@@ -381,6 +402,7 @@
             this.panelDeathsLvl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.panelDeathsLvl.Size = new System.Drawing.Size(373, 16);
             this.panelDeathsLvl.TabIndex = 29;
+            this.panelDeathsLvl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // panelSimpleStats
             // 
@@ -399,6 +421,7 @@
             this.panelSimpleStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.panelSimpleStats.Size = new System.Drawing.Size(373, 16);
             this.panelSimpleStats.TabIndex = 28;
+            this.panelSimpleStats.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // panelStats
             // 
@@ -415,6 +438,7 @@
             this.panelStats.Name = "panelStats";
             this.panelStats.Size = new System.Drawing.Size(367, 72);
             this.panelStats.TabIndex = 27;
+            this.panelStats.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // panelBaseStats
             // 
@@ -439,6 +463,7 @@
             this.panelBaseStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.panelBaseStats.Size = new System.Drawing.Size(85, 72);
             this.panelBaseStats.TabIndex = 28;
+            this.panelBaseStats.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // labelStrVal
             // 
@@ -452,6 +477,7 @@
             this.labelStrVal.TabIndex = 12;
             this.labelStrVal.Text = "-";
             this.labelStrVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelStrVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // labelDexVal
             // 
@@ -465,6 +491,7 @@
             this.labelDexVal.TabIndex = 12;
             this.labelDexVal.Text = "-";
             this.labelDexVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelDexVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // labelVitVal
             // 
@@ -478,6 +505,7 @@
             this.labelVitVal.TabIndex = 12;
             this.labelVitVal.Text = "-";
             this.labelVitVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelVitVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // labelEneVal
             // 
@@ -491,6 +519,7 @@
             this.labelEneVal.TabIndex = 12;
             this.labelEneVal.Text = "-";
             this.labelEneVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelEneVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // panelAdvancedStats
             // 
@@ -515,6 +544,7 @@
             this.panelAdvancedStats.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.panelAdvancedStats.Size = new System.Drawing.Size(85, 72);
             this.panelAdvancedStats.TabIndex = 28;
+            this.panelAdvancedStats.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // labelFrwVal
             // 
@@ -528,6 +558,7 @@
             this.labelFrwVal.TabIndex = 12;
             this.labelFrwVal.Text = "-";
             this.labelFrwVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelFrwVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // labelFhrVal
             // 
@@ -541,6 +572,7 @@
             this.labelFhrVal.TabIndex = 12;
             this.labelFhrVal.Text = "-";
             this.labelFhrVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelFhrVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // labelFcrVal
             // 
@@ -554,6 +586,7 @@
             this.labelFcrVal.TabIndex = 12;
             this.labelFcrVal.Text = "-";
             this.labelFcrVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelFcrVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // labelIasVal
             // 
@@ -567,6 +600,7 @@
             this.labelIasVal.TabIndex = 12;
             this.labelIasVal.Text = "-";
             this.labelIasVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelIasVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // panelResistances
             // 
@@ -591,6 +625,7 @@
             this.panelResistances.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.panelResistances.Size = new System.Drawing.Size(100, 72);
             this.panelResistances.TabIndex = 28;
+            this.panelResistances.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // labelFireResVal
             // 
@@ -604,19 +639,7 @@
             this.labelFireResVal.TabIndex = 12;
             this.labelFireResVal.Text = "-";
             this.labelFireResVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // labelColdResVal
-            // 
-            this.labelColdResVal.AutoSize = true;
-            this.labelColdResVal.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.labelColdResVal.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.labelColdResVal.Location = new System.Drawing.Point(48, 18);
-            this.labelColdResVal.Margin = new System.Windows.Forms.Padding(0);
-            this.labelColdResVal.Name = "labelColdResVal";
-            this.labelColdResVal.Size = new System.Drawing.Size(16, 16);
-            this.labelColdResVal.TabIndex = 12;
-            this.labelColdResVal.Text = "-";
-            this.labelColdResVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelFireResVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // labelLightResVal
             // 
@@ -630,6 +653,7 @@
             this.labelLightResVal.TabIndex = 12;
             this.labelLightResVal.Text = "-";
             this.labelLightResVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelLightResVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // labelPoisonResVal
             // 
@@ -643,55 +667,21 @@
             this.labelPoisonResVal.TabIndex = 12;
             this.labelPoisonResVal.Text = "-";
             this.labelPoisonResVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelPoisonResVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
-            // labelNormPerc
+            // labelColdResVal
             // 
-            this.labelNormPerc.AutoSize = true;
-            this.labelNormPerc.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelNormPerc.ForeColor = System.Drawing.Color.White;
-            this.labelNormPerc.Location = new System.Drawing.Point(0, 0);
-            this.labelNormPerc.Margin = new System.Windows.Forms.Padding(0);
-            this.labelNormPerc.Name = "labelNormPerc";
-            this.labelNormPerc.Size = new System.Drawing.Size(48, 16);
-            this.labelNormPerc.TabIndex = 2;
-            this.labelNormPerc.Text = "NO: -";
-            // 
-            // labelNmPerc
-            // 
-            this.labelNmPerc.AutoSize = true;
-            this.labelNmPerc.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelNmPerc.ForeColor = System.Drawing.Color.White;
-            this.labelNmPerc.Location = new System.Drawing.Point(53, 0);
-            this.labelNmPerc.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.labelNmPerc.Name = "labelNmPerc";
-            this.labelNmPerc.Size = new System.Drawing.Size(48, 16);
-            this.labelNmPerc.TabIndex = 2;
-            this.labelNmPerc.Text = "NM: -";
-            // 
-            // labelHellPerc
-            // 
-            this.labelHellPerc.AutoSize = true;
-            this.labelHellPerc.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelHellPerc.ForeColor = System.Drawing.Color.White;
-            this.labelHellPerc.Location = new System.Drawing.Point(106, 0);
-            this.labelHellPerc.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.labelHellPerc.Name = "labelHellPerc";
-            this.labelHellPerc.Size = new System.Drawing.Size(48, 16);
-            this.labelHellPerc.TabIndex = 2;
-            this.labelHellPerc.Text = "HE: -";
-            // 
-            // panelDiffPercentages2
-            // 
-            this.panelDiffPercentages2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDiffPercentages2.AutoSize = true;
-            this.panelDiffPercentages2.Controls.Add(this.labelNormPerc);
-            this.panelDiffPercentages2.Controls.Add(this.labelNmPerc);
-            this.panelDiffPercentages2.Controls.Add(this.labelHellPerc);
-            this.panelDiffPercentages2.Location = new System.Drawing.Point(3, 146);
-            this.panelDiffPercentages2.Name = "panelDiffPercentages2";
-            this.panelDiffPercentages2.Size = new System.Drawing.Size(367, 16);
-            this.panelDiffPercentages2.TabIndex = 33;
+            this.labelColdResVal.AutoSize = true;
+            this.labelColdResVal.Font = new System.Drawing.Font("Courier New", 9.75F);
+            this.labelColdResVal.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.labelColdResVal.Location = new System.Drawing.Point(48, 18);
+            this.labelColdResVal.Margin = new System.Windows.Forms.Padding(0);
+            this.labelColdResVal.Name = "labelColdResVal";
+            this.labelColdResVal.Size = new System.Drawing.Size(16, 16);
+            this.labelColdResVal.TabIndex = 12;
+            this.labelColdResVal.Text = "-";
+            this.labelColdResVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelColdResVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // panelDiffPercentages
             // 
@@ -714,6 +704,7 @@
             this.panelDiffPercentages.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.panelDiffPercentages.Size = new System.Drawing.Size(97, 72);
             this.panelDiffPercentages.TabIndex = 29;
+            this.panelDiffPercentages.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // normLabel
             // 
@@ -726,6 +717,7 @@
             this.normLabel.Size = new System.Drawing.Size(48, 16);
             this.normLabel.TabIndex = 2;
             this.normLabel.Text = "NORM:";
+            this.normLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // nmLabel
             // 
@@ -738,6 +730,7 @@
             this.nmLabel.Size = new System.Drawing.Size(32, 16);
             this.nmLabel.TabIndex = 2;
             this.nmLabel.Text = "NM:";
+            this.nmLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // hellLabel
             // 
@@ -750,6 +743,7 @@
             this.hellLabel.Size = new System.Drawing.Size(48, 16);
             this.hellLabel.TabIndex = 2;
             this.hellLabel.Text = "HELL:";
+            this.hellLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // normLabelVal
             // 
@@ -763,6 +757,7 @@
             this.normLabelVal.TabIndex = 12;
             this.normLabelVal.Text = "-";
             this.normLabelVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.normLabelVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // nmLabelVal
             // 
@@ -776,6 +771,7 @@
             this.nmLabelVal.TabIndex = 12;
             this.nmLabelVal.Text = "-";
             this.nmLabelVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.nmLabelVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // hellLabelVal
             // 
@@ -789,6 +785,60 @@
             this.hellLabelVal.TabIndex = 12;
             this.hellLabelVal.Text = "-";
             this.hellLabelVal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.hellLabelVal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
+            // 
+            // panelDiffPercentages2
+            // 
+            this.panelDiffPercentages2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDiffPercentages2.AutoSize = true;
+            this.panelDiffPercentages2.Controls.Add(this.labelNormPerc);
+            this.panelDiffPercentages2.Controls.Add(this.labelNmPerc);
+            this.panelDiffPercentages2.Controls.Add(this.labelHellPerc);
+            this.panelDiffPercentages2.Location = new System.Drawing.Point(3, 146);
+            this.panelDiffPercentages2.Name = "panelDiffPercentages2";
+            this.panelDiffPercentages2.Size = new System.Drawing.Size(367, 16);
+            this.panelDiffPercentages2.TabIndex = 33;
+            this.panelDiffPercentages2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
+            // 
+            // labelNormPerc
+            // 
+            this.labelNormPerc.AutoSize = true;
+            this.labelNormPerc.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelNormPerc.ForeColor = System.Drawing.Color.White;
+            this.labelNormPerc.Location = new System.Drawing.Point(0, 0);
+            this.labelNormPerc.Margin = new System.Windows.Forms.Padding(0);
+            this.labelNormPerc.Name = "labelNormPerc";
+            this.labelNormPerc.Size = new System.Drawing.Size(48, 16);
+            this.labelNormPerc.TabIndex = 2;
+            this.labelNormPerc.Text = "NO: -";
+            this.labelNormPerc.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
+            // 
+            // labelNmPerc
+            // 
+            this.labelNmPerc.AutoSize = true;
+            this.labelNmPerc.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelNmPerc.ForeColor = System.Drawing.Color.White;
+            this.labelNmPerc.Location = new System.Drawing.Point(53, 0);
+            this.labelNmPerc.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.labelNmPerc.Name = "labelNmPerc";
+            this.labelNmPerc.Size = new System.Drawing.Size(48, 16);
+            this.labelNmPerc.TabIndex = 2;
+            this.labelNmPerc.Text = "NM: -";
+            this.labelNmPerc.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
+            // 
+            // labelHellPerc
+            // 
+            this.labelHellPerc.AutoSize = true;
+            this.labelHellPerc.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelHellPerc.ForeColor = System.Drawing.Color.White;
+            this.labelHellPerc.Location = new System.Drawing.Point(106, 0);
+            this.labelHellPerc.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.labelHellPerc.Name = "labelHellPerc";
+            this.labelHellPerc.Size = new System.Drawing.Size(48, 16);
+            this.labelHellPerc.TabIndex = 2;
+            this.labelHellPerc.Text = "HE: -";
+            this.labelHellPerc.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // outerLeftRightPanel
             // 
@@ -802,6 +852,8 @@
             this.outerLeftRightPanel.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.outerLeftRightPanel.Size = new System.Drawing.Size(425, 222);
             this.outerLeftRightPanel.TabIndex = 21;
+            this.outerLeftRightPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.outerLeftRightPanel_Paint);
+            this.outerLeftRightPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // panelRuneDisplay2
             // 
@@ -816,6 +868,7 @@
             this.panelRuneDisplay2.Name = "panelRuneDisplay2";
             this.panelRuneDisplay2.Size = new System.Drawing.Size(28, 28);
             this.panelRuneDisplay2.TabIndex = 18;
+            this.panelRuneDisplay2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frwLabel_MouseDown);
             // 
             // MainWindow
             // 
@@ -828,7 +881,7 @@
             this.ContextMenuStrip = this.contextMenu;
             this.Controls.Add(this.outerLeftRightPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -849,10 +902,10 @@
             this.panelAdvancedStats.PerformLayout();
             this.panelResistances.ResumeLayout(false);
             this.panelResistances.PerformLayout();
-            this.panelDiffPercentages2.ResumeLayout(false);
-            this.panelDiffPercentages2.PerformLayout();
             this.panelDiffPercentages.ResumeLayout(false);
             this.panelDiffPercentages.PerformLayout();
+            this.panelDiffPercentages2.ResumeLayout(false);
+            this.panelDiffPercentages2.PerformLayout();
             this.outerLeftRightPanel.ResumeLayout(false);
             this.outerLeftRightPanel.PerformLayout();
             this.ResumeLayout(false);

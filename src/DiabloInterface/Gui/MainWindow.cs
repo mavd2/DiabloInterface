@@ -9,6 +9,7 @@ using DiabloInterface.Logging;
 using System.Text;
 using DiabloInterface.Gui.Controls;
 using DiabloInterface.D2;
+using System.Runtime.InteropServices;
 
 namespace DiabloInterface.Gui
 {
@@ -674,6 +675,43 @@ namespace DiabloInterface.Gui
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd,
+                         int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private void outerLeftRightPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void outerLeftRightPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void flowLayoutPanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void frwLabel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }
