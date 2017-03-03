@@ -1,5 +1,7 @@
 # DiabloInterface
 
+Mavd2 borderless fork + improved rune picture clarity
+
 Diablo 2 Interface for streamers/speedrunners
 
 The tool reads memory that is used by Diablo 2 executable and finds information 
@@ -47,10 +49,6 @@ Put them into same folder as the exe file and rename to settings.conf, or just l
 
 [settings.conf](https://github.com/Zutatensuppe/DiabloInterface/releases/download/v0.3.0/settings.conf)
 
-## Contact
-
-Feel free to join us in Discord in our [DiabloInterface Channel](https://discord.gg/CVJvyAz).
-
 ## Troubleshooting
 
 1. The tool must be run as administrator, otherwise it cannot read the memory from another process.
@@ -74,7 +72,7 @@ Feel free to join us in Discord in our [DiabloInterface Channel](https://discord
 
 ## Use in Battle.net
 
-Even though DI is only reading and not manipulating game data, we discourage the use of DiabloInterface in Battle.net. We do not know, if it is seen as a cheat/hack by Blizzard. Using the tool might possibly result in a ban.
+We discourage the use of DiabloInterface in Battle.net as we do not know, if it is seen as a cheat/hack by Blizzard. Using the tool might possibly result in a ban.
 
 ## Credits
 
